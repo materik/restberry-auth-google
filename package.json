@@ -1,0 +1,37 @@
+{
+    "author": {
+        "name": "Mattias Eriksson",
+        "email": "materik@me.com"
+    },
+    "bugs": {
+        "url": "https://github.com/materik/restberry-auth-google/issues"
+    },
+    "contributors": [
+        {
+            "name": "Mattias Eriksson",
+            "email": "materik@me.com"
+        }
+    ],
+    "dependencies": {
+        "passport-google-oauth": "0.1.x",
+        "restberry-errors": "0.1.x",
+        "restberry-logger": "0.1.x",
+        "restberry-modules": "0.1.x",
+        "underscore": "1.5.x"
+    },
+    "description": "Passport-google-oauth wrapper for Restberry Auth",
+    "homepage": "http://restberry.com",
+    "keywords": [
+        "google",
+        "passport",
+        "restberry"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "restberry-auth-google",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/materik/restberry-auth-google.git"
+    },
+    "version": "0.1.0"
+}
