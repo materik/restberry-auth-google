@@ -14,9 +14,9 @@
     ],
     "dependencies": {
         "passport-google-oauth": "0.1.x",
-        "restberry-errors": "0.1.x",
+        "restberry-errors": "0.2.x",
         "restberry-logger": "0.1.x",
-        "restberry-modules": "0.1.x",
+        "restberry-modules": "0.2.x",
         "underscore": "1.5.x"
     },
     "description": "Passport-google-oauth wrapper for Restberry Auth",
@@ -33,5 +33,5 @@
         "type": "git",
         "url": "https://github.com/materik/restberry-auth-google.git"
     },
-    "version": "0.1.0"
+    "version": "0.2.0"
 }
