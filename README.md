@@ -1,6 +1,8 @@
 Restberry-Auth-Google
 =====================
 
+[![](https://img.shields.io/npm/v/restberry-auth-google.svg)](https://www.npmjs.com/package/restberry-auth-google) [![](https://img.shields.io/npm/dm/restberry-auth-google.svg)](https://www.npmjs.com/package/restberry-auth-google)
+
 Passport-google-oauth wrapper for Restberry Auth.
 
 ## Install
