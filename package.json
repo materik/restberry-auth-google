@@ -4,7 +4,7 @@
         "email": "materik@me.com"
     },
     "bugs": {
-        "url": "https://github.com/materik/restberry-auth-google/issues"
+        "url": "https://github.com/materik/restberry-passport-google/issues"
     },
     "contributors": [
         {
@@ -18,7 +18,7 @@
         "restberry-logger": "1.0.x",
         "underscore": "1.8.x"
     },
-    "description": "Passport-google-oauth wrapper for Restberry Auth",
+    "description": "Passport-google-oauth wrapper for Restberry",
     "homepage": "http://restberry.com",
     "keywords": [
         "google",
@@ -27,10 +27,10 @@
     ],
     "license": "MIT",
     "main": "index.js",
-    "name": "restberry-auth-google",
+    "name": "restberry-passport-google",
     "repository": {
         "type": "git",
-        "url": "https://github.com/materik/restberry-auth-google.git"
+        "url": "https://github.com/materik/restberry-passport-google.git"
     },
-    "version": "0.2.10"
+    "version": "1.0.0"
 }

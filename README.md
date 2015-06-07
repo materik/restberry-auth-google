@@ -1,22 +1,22 @@
-Restberry-Auth-Google
-=====================
+Restberry-Passport-Google
+=========================
 
-[![](https://img.shields.io/npm/v/restberry-auth-google.svg)](https://www.npmjs.com/package/restberry-auth-google) [![](https://img.shields.io/npm/dm/restberry-auth-google.svg)](https://www.npmjs.com/package/restberry-auth-google)
+[![](https://img.shields.io/npm/v/restberry-passport-google.svg)](https://www.npmjs.com/package/restberry-passport-google) [![](https://img.shields.io/npm/dm/restberry-passport-google.svg)](https://www.npmjs.com/package/restberry-passport-google)
 
 Passport-google-oauth wrapper for Restberry.
 
 ## Install
 
 ```
-npm install restberry-auth-google
+npm install restberry-passport-google
 ```
 
 ## Usage
 
 ```
-var restberryAuth = require('restberry-auth');
+var restberryPassport = require('restberry-passport');
 
-var auth = restberryAuth.config(function(auth) {
+var auth = restberryPassport.config(function(auth) {
     ...
 })
 .use('google', {
