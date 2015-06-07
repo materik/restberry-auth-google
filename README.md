@@ -15,18 +15,18 @@ npm install restberry-auth-google
 
 ```
 var restberryAuth = require('restberry-auth');
-var restberryAuthGoogle = require('restberry-auth-google');
 
-restberry
-    .use(restberryAuth.use(function(auth) {
-            ...
-        })
-        .use(restberryAuthGoogle.config({
-            clientID: ...,
-            clientSecret: ...,
-            callbackHost: ...,
-            returnURL: ...,
-        });
+var auth = restberryAuth.config(function(auth) {
+    ...
+})
+.use('google', {
+    clientID: ...,
+    clientSecret: ...,
+    callbackHost: ...,
+    returnURL: ...,
+});
+
+restberry.use(auth);
 ```
 
 Two new routes have been created to the User: GET /login/google and GET
