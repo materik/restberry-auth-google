@@ -7,9 +7,8 @@ var DEFAULT_CALLBACK_HOST = 'http://localhost';
 var DEFAULT_RETURN_URL = '/';
 var DEFAULT_SCHEMA = {
     email: {type: String, required: true, unique: true, lowercase: true},
-    gender: {type: String},
     ids: {
-        google: {type: String, required: true},
+        google: {type: String},
     },
     image: {type: String},
     name: {
@@ -67,25 +66,32 @@ RestberryPassportGoogle.prototype.enable = function(next) {
 };
 
 RestberryPassportGoogle.prototype.findOrCreateUser = function(profile, next) {
-    var self = this;
-    var User = self.restberry.auth.getUser();
-    User.findOne({'ids.google': profile.id}, function(user) {
-        next(undefined, user);
-    }, function() {
-        var user = User._create({
-            email: profile.email,
-            gender: profile.gender,
-            ids: {
-                google: profile.id,
-            },
-            image: profile.picture,
-            name: {
-                full: profile.name,
-                first: profile.given_name,
-                last: profile.family_name,
-            },
-        });
+    var data = {
+        email: profile.email,
+        ids: {
+            google: profile.id,
+        },
+        image: profile.picture,
+        name: {
+            full: profile.name,
+            first: profile.given_name,
+            last: profile.family_name,
+        },
+    };
+    var query = {
+        $or: [
+            {'ids.google': profile.id},
+            {'email': profile.email},
+        ],
+    };
+    var User = this.restberry.auth.getUser();
+    User.findOne(query, function(user) {
+        user.set(data);
         user.save(function(user) {
+            next(undefined, user);
+        });
+    }, function() {
+        User.create(data, function(user) {
             next(undefined, user);
         });
     });
